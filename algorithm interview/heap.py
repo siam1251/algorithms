@@ -1,3 +1,12 @@
+'''
+inShort:build from last parent(percUP) //Remember-- this is the toughest
+Sorting: swap the first element with the last position and reduce size by 1, do percDown
+
+start from smallest tree to root so that it satisfy the properties of heap
+1. percDown:
+whenever you insert, insert at end and  percUp
+2. percUp:
+'''
 class Heap:
 	def __init__(self,list):
 		self.list = list
