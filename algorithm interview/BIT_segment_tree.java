@@ -67,7 +67,7 @@ public class NumArray {
 		init(i, diff);
 	}
 
-	public int getSum(int i) {
+	public int prefixSum(int i) {
 		int sum = 0;
 		i++;
 		while (i > 0) {
@@ -78,7 +78,7 @@ public class NumArray {
 	}
 
 	public int sumRange(int i, int j) {
-		return getSum(j) - getSum(i - 1);
+		return prefixSum(j) - prefixSum(i - 1);
 	}
 }
 
