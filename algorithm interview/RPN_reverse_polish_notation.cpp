@@ -1,4 +1,11 @@
 //  https://leetcode.com/problems/basic-calculator
+// operator precedences
+//highest to lowest
+// ^
+// *,/,unirary
+// +,-
+// (
+//  =
 class Solution {
     unordered_map<char, int> mp{
         {'(', 1}, {'+', 2},{'-', 2}, {'~', 3}
