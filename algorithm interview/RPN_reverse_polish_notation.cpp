@@ -2,7 +2,7 @@
 // operator precedences
 //highest to lowest
 // ^
-// *,/,unirary
+// *,/,unary
 // +,-
 // (
 //  =
