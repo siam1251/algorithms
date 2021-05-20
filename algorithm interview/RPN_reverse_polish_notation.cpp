@@ -7,6 +7,7 @@
 // +,-
 // (
 //  =
+// ops will be monotonocally increasing , left bracket is a special case just insert and continue
 class Solution {
     unordered_map<char, int> mp{
         {'(', 1}, {'+', 2},{'-', 2}, {'~', 3}
