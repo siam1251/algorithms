@@ -1,4 +1,5 @@
 //  https://leetcode.com/problems/basic-calculator
+// video link https://www.youtube.com/watch?v=LQ-iW8jm6Mk&t=326s
 // operator precedences
 //highest to lowest
 // ^
