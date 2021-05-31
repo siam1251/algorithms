@@ -1,5 +1,5 @@
 vector<int> build_pattern(){
-  vector<int> dp(token.size()+1, 0);
+  vector<int> dp(token.size(), 0);
   int j = 0;
   for(int i = 1; i < token.size();){
       if(token[i] == token[j]){
