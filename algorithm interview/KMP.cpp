@@ -1,3 +1,6 @@
+//Worst-case performance	Θ(m) preprocessing + Θ(n) matching[note 1]
+//Worst-case space complexity	Θ(m)
+//
 vector<int> build_pattern(){
   vector<int> dp(token.size(), 0);
   int j = 0;
