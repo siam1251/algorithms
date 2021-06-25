@@ -47,9 +47,10 @@ class Solution {
                 unique_lock lck(m);
                 cv.wait(lck, [&](){return q.size() > 0|| done == true;});
                 if(done == true)break;
+                working++;
                 string url = q.front();
                 q.pop();
-                working++;
+                
                
                 lck.unlock();
                 vector<string> urls = htmlParser->getUrls(url);
