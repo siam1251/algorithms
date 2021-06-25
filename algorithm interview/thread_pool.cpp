@@ -1,3 +1,6 @@
+// C++ thread pool with future and promise 
+// https://github.com/bshoshany/thread-pool/blob/master/thread_pool.hpp
+
 /**
  * // This is the HtmlParser's API interface.
  * // You should not implement it, or speculate about its implementation
