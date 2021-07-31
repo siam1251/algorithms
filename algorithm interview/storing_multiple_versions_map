@@ -1,0 +1,66 @@
+Design a list with the follwoing methods:
+
+class CustomMap {
+
+	public void set(int key, int value) {
+	}
+
+	public Integer get(int key) {
+	}
+
+	public void setAll(int value) {
+	}
+}
+All methods should work in O(1) time.
+
+//Example:
+
+CustomMap map = new CustomMap();
+map.set(0, 1);
+map.get(0); // 1
+map.set(1, 2);
+map.get(1); // 2
+map.setAll(5);
+map.get(0); // 5
+map.get(1); // 5
+map.get(2); // null, there's no such key
+map.set(2, 7);
+map.get(0); // 5
+map.get(1); // 5
+map.get(2); // 7
+
+// Solution
+class Node
+{
+int version;
+int val;
+}
+class CustomMap {
+
+int version;
+HashMap<Integer,Integer> versionMap;
+HashMap<Integer,Node> map;
+pubic CustomMap()
+{
+	version=0;
+	versionMap=new HashMap<Integer,Integer>();
+	map = new HashMap<Integer,Node>();
+}
+public void set(int key, int value) {
+     map.put(key, new Node(version,value));
+}
+
+public Integer get(int key) {
+     if(!map.containsKey(key))
+		return null;
+	Node node = map.get(key);
+	if(node.version<version)
+		return versionMap.get(version);
+	return node.val;
+}
+
+public void setAll(int value) {
+	version++;
+	versionMap.put(version,value);
+}
+}
